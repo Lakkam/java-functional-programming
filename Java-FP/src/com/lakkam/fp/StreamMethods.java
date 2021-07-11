@@ -1,5 +1,6 @@
 package com.lakkam.fp;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -14,6 +15,21 @@ public class StreamMethods {
 		sumOfSquaresfromList(numbers);
 		System.out.println(sum);
 
+		
+		/**
+		 * Various methods of creating streams
+		 */
+		
+		//Approach 1
+		numbers.stream();
+		//Approach 2.......This is streaming on top primitive values..
+		int[] numbersArray = {1,2,3,4,5};
+		Arrays.stream(numbersArray).forEach(System.out::println);
+		//Can directly make a call to average from this primitive streams...
+		Arrays.stream(numbersArray).average();
+		
+		
+		
 		// Everything in single statement
 		System.out.println(numbers.stream().reduce(0, Integer::sum));
 
